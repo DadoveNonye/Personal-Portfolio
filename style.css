@@ -1,0 +1,366 @@
+*, html{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 990px;
+    margin: 0 auto;
+    background-color: #525050;
+    font-family: 'Merriweather', serif;
+}
+
+.container{
+    background-color: #e6e1e1;
+    width: 100%;
+    position: relative;
+}
+
+nav > h1{
+    font-size: 3rem;
+    padding-left: 5px;
+}
+
+nav h1 span{
+    color: #a87132;
+}
+
+.name{
+    font-size: 2rem;
+}
+
+.hero-writeup form{
+    margin-top: 15px;
+    position: relative;
+    max-width: 100%;
+    width: 200px;
+}
+
+.hero-writeup form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #a87132;
+    border-radius: 15px;
+}
+
+.hero-writeup form input:last-child{
+    position: absolute;
+    display: inline-block;
+    /* top: 6px; */
+    left: 61%;
+    bottom: 7%;
+    font-size: 18px;
+    background: #a87132;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+nav ul li,
+nav ul li a,
+.hero,
+.hero-writeup,
+.about,
+.about-text,
+.ind-project{
+    display: flex;
+}
+
+nav ul li{
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 7px;
+}
+
+.bx-menu{
+   position: absolute;
+   right: 10%;
+   top:  10px;
+   font-size: 25px;
+   z-index: 1000;
+   display: none;
+   cursor: pointer;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333332;
+    transition-duration: 2s;
+    transition-property: font-size;
+    position: relative;
+}
+
+ul li a::after{
+    content: " ";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #a87132;
+    transition: ease .7s;
+    left: 0;
+    top: -4px;
+    font-size: 20px;
+}
+
+ul li a:hover::after{
+    width: 100%;
+    font-size: 20px;
+}
+
+img{
+    width: 400px;
+
+}
+
+.hero{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-writeup{
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+}
+.hero-writeup > h2 span{
+    color: #a87132;
+}
+
+.hero-writeup > h5{
+    color: #a87132;
+    font-weight: bold;
+}
+
+.empty{
+    border: 2px solid #a87132;
+}
+
+.about{
+    width: 100%;
+    margin-top: 30px;
+    color: black;
+    background-color: white;
+    gap: 40px;
+}
+
+.about-text{
+     flex-direction: column;
+     align-self: center;
+     line-height: 2;
+     padding: 10px;
+}
+
+.about-text > h2,
+.ind-project > h2{
+    text-align: center;
+    color: #a87132;
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    gap: 20px;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.ind-project{
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.ind-project > img{
+    max-width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.ind-project > img:hover{
+    transform: scale(1.1);
+}
+
+.ind-project > p{
+    margin: 10px 0;
+    text-align: center;
+}
+
+.ind-project a{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+    background: #a87132;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.ind-project a:hover{
+    background: grey;
+    transform: translateY(-10px);
+}
+
+#contact{
+    background: white;
+}
+
+.contact{
+    display: flex;
+    padding: 20px 0;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+.contact input,
+.contact textarea,
+.btn{
+    width: 100%;
+    display: block;
+    margin: 5px;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px ;
+}
+
+.contact-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    line-height: 1.6;
+}
+
+.contact form{
+    margin-bottom: 15px;
+}
+
+.btn{
+    background: #a87132;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: translateY(-8px);
+}
+
+footer{
+    background: black;
+    color: grey;
+    padding: 30px;
+    text-align: center;
+}
+
+@media (max-width: 650px){
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px;
+        text-align: center;
+    }
+   .contact-text{
+       display: flex;
+       justify-content: center;
+       margin: 0 auto;
+       width: 100%;
+       margin-bottom: 10px;
+   } 
+}
+
+@media (max-width: 700px){
+    body{
+         font-family: 'Mulish', sans-serif;
+        transition: .9s;
+    }
+    .about img{
+        display: none;
+    }
+    .bx-menu{
+        display: block;
+    }
+
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 59px;
+        right: 0px;
+        width: 100%;
+        height: 70vh;
+        background: #4a4947;
+        color: #a87132;
+        margin: 0;
+        justify-content: space-around;
+        max-height: 0;
+        overflow: hidden;
+        transition: ease-in-out .5s;
+        padding-top: 0px;
+        padding-left: 20px;
+        z-index: 9;
+        }
+    
+        nav ul li.open{
+          max-height: 100vh;
+        }
+    nav ul li a{
+          color: #d6d6d4;
+        }
+        nav ul li a:hover{
+            background: #d6d6d4;
+            color: #a87169;
+            font-weight: bold;
+            padding: 20px;
+            transition: .7s;
+            border-radius: 10px;
+        }
+}
+
+@media (max-width: 750px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .empty{
+        display: none;
+    }
+    .hero img{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        transition: .9s;
+    }
+}
+
+@media (max-width: 860px){
+    body{
+        font-family: 'Merriweather', serif;
+        /* font-family: 'Mulish', sans-serif; */
+        transition: .9s;
+    }
+    nav h1{
+        padding-left: 10px;
+        transition: .9s;
+    }
+    nav ul li{
+        padding-right: 14px;
+        transition: .9s;
+    }
+    .project{
+        display: flex;
+        flex-wrap: wrap;
+        transition: .9s;
+    }
+}
+
